@@ -167,5 +167,27 @@ namespace Bootcamp_Project_Dragon_API.Controllers
             return Ok();
         }
 
+        [HttpPut("{id}")]
+        public IActionResult UpdateContact( int id, [FromBody] Contact updatedContact )
+        {
+            var contact = ContactList.SingleOrDefault(c => c.ContactID == id);
+            if ( contact is null )
+                return BadRequest();
+
+            contact.Name = updatedContact.Name != default
+                ? updatedContact.Name
+                : contact.Name;
+            contact.Surname = updatedContact.Surname != default
+                ? updatedContact.Surname
+                : contact.Surname;
+            contact.PhoneNumber = updatedContact.PhoneNumber != default ?
+                updatedContact.PhoneNumber
+                : contact.PhoneNumber;
+            contact.ProfilePicture = updatedContact.ProfilePicture != default ?
+                updatedContact.ProfilePicture
+                : contact.ProfilePicture;
+            return Ok();
+        }
+
     }
 }
