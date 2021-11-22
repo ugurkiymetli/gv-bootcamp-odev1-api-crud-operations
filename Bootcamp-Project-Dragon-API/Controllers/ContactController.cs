@@ -168,6 +168,7 @@ namespace Bootcamp_Project_Dragon_API.Controllers
         }
 
         [HttpPut("{id}")]
+        //Bir Database ile çalışırken root'dan id vermeyiz, ama şimdilik listelerle çalıştığımız için böyle yaptık.
         public IActionResult UpdateContact( int id, [FromBody] Contact updatedContact )
         {
             var contact = ContactList.SingleOrDefault(c => c.ContactID == id);
@@ -186,6 +187,15 @@ namespace Bootcamp_Project_Dragon_API.Controllers
             contact.ProfilePicture = updatedContact.ProfilePicture != default ?
                 updatedContact.ProfilePicture
                 : contact.ProfilePicture;
+            return Ok();
+        }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteContact( int id )
+        {
+            var contact = ContactList.SingleOrDefault(c => c.ContactID == id);
+            if ( contact is null )
+                return BadRequest();
+            ContactList.Remove(contact);
             return Ok();
         }
 
