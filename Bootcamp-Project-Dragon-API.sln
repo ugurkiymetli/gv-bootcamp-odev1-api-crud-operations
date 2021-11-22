@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp-Project-Dragon-API", "Bootcamp-Project-Dragon-API\Bootcamp-Project-Dragon-API.csproj", "{F1E55E0B-09BD-44AA-B82A-5A5AE7598251}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bootcamp-Project-Dragon", "Bootcamp-Project-Dragon\Bootcamp-Project-Dragon.csproj", "{1853F517-C72C-4DF4-AA90-256E7CEBD386}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F1E55E0B-09BD-44AA-B82A-5A5AE7598251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E55E0B-09BD-44AA-B82A-5A5AE7598251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1E55E0B-09BD-44AA-B82A-5A5AE7598251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1853F517-C72C-4DF4-AA90-256E7CEBD386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1853F517-C72C-4DF4-AA90-256E7CEBD386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1853F517-C72C-4DF4-AA90-256E7CEBD386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1853F517-C72C-4DF4-AA90-256E7CEBD386}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
