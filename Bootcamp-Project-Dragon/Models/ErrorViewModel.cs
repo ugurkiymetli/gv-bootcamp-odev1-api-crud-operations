@@ -1,5 +1,3 @@
-using System;
-
 namespace Bootcamp_Project_Dragon.Models
 {
     public class ErrorViewModel
