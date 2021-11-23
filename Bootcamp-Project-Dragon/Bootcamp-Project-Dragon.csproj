@@ -5,4 +5,9 @@
     <RootNamespace>Bootcamp_Project_Dragon</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.12" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,7 @@
+using Bootcamp_Project_Dragon_API.DbOperations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,8 @@ namespace Bootcamp_Project_Dragon_API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Bootcamp_Project_Dragon_API", Version = "v1" });
             });
+            //Adding DbContext as a service to run on startup
+            services.AddDbContext<ContactAppDbContext>(options => options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
