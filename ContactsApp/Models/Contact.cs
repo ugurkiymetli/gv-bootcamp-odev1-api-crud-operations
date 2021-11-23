@@ -23,6 +23,5 @@ namespace ContactsApp.Models
         [Display(Name = "Profile Picture")]
         [DataType(DataType.ImageUrl)]
         public string ProfilePicture { get; set; }
-
     }
 }

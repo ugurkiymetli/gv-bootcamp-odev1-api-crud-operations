@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Bootcamp_Project_Dragon_API</RootNamespace>
+    <RootNamespace>ContactsAppWebAPI</RootNamespace>
+    <AssemblyName>ContactsAppWebAPI</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
