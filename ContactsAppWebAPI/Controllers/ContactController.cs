@@ -4,6 +4,7 @@ using ContactsAppWebAPI.ContactsOperations.GetContactDetail;
 using ContactsAppWebAPI.ContactsOperations.GetContacts;
 using ContactsAppWebAPI.ContactsOperations.UpdateContact;
 using ContactsAppWebAPI.DbOperations;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -45,6 +46,8 @@ namespace ContactsAppWebAPI.Controllers
             {
                 GetContactDetailQuery query = new(_context);
                 query.id = id;
+                GetContactDetailQueryValidator validator = new GetContactDetailQueryValidator();
+                validator.ValidateAndThrow(query);
                 result = query.Handle();
             }
             catch ( Exception ex )
@@ -63,6 +66,8 @@ namespace ContactsAppWebAPI.Controllers
             try
             {
                 command.Model = newContact;
+                CreateContactCommandValidator validator = new();
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch ( Exception ex )
@@ -81,6 +86,8 @@ namespace ContactsAppWebAPI.Controllers
             {
                 command.Model = updatedContact;
                 command.id = id;
+                UpdateContactCommandValidator validator = new();
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch ( Exception ex )
@@ -99,6 +106,8 @@ namespace ContactsAppWebAPI.Controllers
             try
             {
                 command.id = id;
+                DeleteContactCommandValidator validator = new();
+                validator.ValidateAndThrow(command);
                 command.Handle();
             }
             catch ( Exception ex )

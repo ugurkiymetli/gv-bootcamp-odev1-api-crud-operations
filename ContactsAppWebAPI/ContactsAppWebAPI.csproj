@@ -7,13 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.12" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bootcamp-Project-Dragon\ContactsApp.csproj" />
+    <ProjectReference Include="..\ContactsApp\ContactsApp.csproj" />
     <ProjectReference Include="..\ContactsApp\ContactsApp.csproj" />
   </ItemGroup>
 
